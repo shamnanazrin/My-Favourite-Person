@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reasons I Love You ❤️</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {
+    background: #ffe4ec;
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #a83260;
+    padding: 40px 15px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+.subtitle {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+    gap: 40px 25px;
+    margin: 65px auto 40px;
+}
+
+.envelope {
+    width: 100px;
+    height: 70px;
+    background: #171717;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    animation: float 2s infinite ease-in-out;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 38px solid #383838;
+}
+
+.heart {
+    position: absolute;
+    top: 23px;
+    left: 39px;
+    font-size: 23px;
+    z-index: 2;
+}
+
+.envelope:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.message {
+    display: none;
+    background: #fffafa;
+    padding: 25px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 330px;
+    color: #a83260;
+    font-size: 19px;
+    line-height: 1.6;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    animation: appear 0.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    margin-top: 45px;
+    font-style: italic;
+}
+
+@media (max-width: 400px) {
+    .container {
+        gap: 30px 15px;
+        grid-template-columns: repeat(3, 85px);
+    }
+
+    .envelope {
+        width: 85px;
+    }
+
+    .envelope::before {
+        border-left-width: 42.5px;
+        border-right-width: 42.5px;
+    }
+
+    .heart {
+        left: 32px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Reasons Why I Love You 🖤</h1>
+
+<p class="subtitle">
+Six little envelopes,<br>
+each holding a piece of my heart. ❤️
+</p>
+
+<div class="container">
+
+<button class="envelope" onclick="showMessage(0)">
+<span class="heart">❤️</span>
+</button>
+
+<button class="envelope" onclick="showMessage(1)">
+<span class="heart">❤️</span>
+</button>
+
+<button class="envelope" onclick="showMessage(2)">
+<span class="heart">❤️</span>
+</button>
+
+<button class="envelope" onclick="showMessage(3)">
+<span class="heart">❤️</span>
+</button>
+
+<button class="envelope" onclick="showMessage(4)">
+<span class="heart">❤️</span>
+</button>
+
+<button class="envelope" onclick="showMessage(5)">
+<span class="heart">❤️</span>
+</button>
+
+</div>
+
+<div class="message" id="message"></div>
+
+<p class="footer">
+Made with love, just for you. 💌
+</p>
+
+<script>
+
+const reasons = [
+
+"Because of the way you look after me. ❤️",
+
+"Because you make me feel safe. 🖤",
+
+"Because of the way you make me smile. 💗",
+
+"Because you are simply amazing. ❤️",
+
+"Because your smile is my favourite. 🥹",
+
+"Because you make me feel like myself when I'm with you. 💌"
+
+];
+
+function showMessage(number) {
+
+    const box = document.getElementById("message");
+
+    box.style.display = "block";
+
+    box.innerHTML = "💌<br><br>" + reasons[number];
+
+}
+
+</script>
+
+<br><br>
+<a href="page4.html" style="
+display:inline-block;
+background:#a83260;
+color:white;
+padding:14px 25px;
+border-radius:30px;
+text-decoration:none;
+font-size:16px;">
+Read Our Journey ❤️
+</a>
+</body>
+</html>
